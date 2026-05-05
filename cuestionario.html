@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario - Proyecto Analfabetismo</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/cuestionario.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📚 Cuestionario Interactivo</h1>
+            <button id="backBtn" class="btn-secondary">← Volver</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="cuestionario-section">
+            <div class="pregunta-container">
+                <h2 id="preguntaTitulo"></h2>
+                <p id="preguntaTexto"></p>
+                <img id="preguntaImagen" src="" alt="Imagen de la pregunta" style="display: none;">
+                
+                <div class="opciones-container" id="opcionesContainer">
+                    <!-- Las opciones se cargarán dinámicamente -->
+                </div>
+                
+                <div class="navegacion">
+                    <button id="anteriorBtn" class="btn-secondary" onclick="preguntaAnterior()">← Anterior</button>
+                    <span id="contador"></span>
+                    <button id="siguienteBtn" class="btn-secondary" onclick="siguientePregunta()">Siguiente →</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/progress.js"></script>
+    <script src="js/cuestionario.js"></script>
+</body>
+</html>

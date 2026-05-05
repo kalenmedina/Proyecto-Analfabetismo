@@ -1,0 +1,118 @@
+.cuestionario-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pregunta-container {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#preguntaTitulo {
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+#preguntaTexto {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+#preguntaImagen {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+.opciones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.opcion {
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.opcion:hover {
+    border-color: #667eea;
+    background: #f5f7ff;
+    transform: translateX(5px);
+}
+
+.opcion.seleccionada {
+    border-color: #667eea;
+    background: #667eea;
+    color: white;
+}
+
+.opcion.correcta {
+    border-color: #4caf50;
+    background: #4caf50;
+    color: white;
+}
+
+.opcion.incorrecta {
+    border-color: #f44336;
+    background: #f44336;
+    color: white;
+}
+
+.emoji-opcion {
+    font-size: 2rem;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+#contador {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 0.95rem;
+}
+
+.btn-secondary {
+    padding: 0.6rem 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .cuestionario-section {
+        padding: 1rem;
+    }
+
+    .navegacion {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
